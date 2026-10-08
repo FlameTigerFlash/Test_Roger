@@ -19,6 +19,8 @@ public class LocationBoundaryRenderer : MonoBehaviour
 
     private void Rebuild()
     {
+        if (_boundary == null || _lineRenderer == null) return;
+
         Vector2 center = _boundary.Center;
         Vector2 size = _boundary.Size;
 

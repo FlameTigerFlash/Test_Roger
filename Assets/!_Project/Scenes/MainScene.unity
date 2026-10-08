@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.05
+  m_FogDensity: 0
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -1138,13 +1138,13 @@ LineRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_MaskInteraction: 0
   m_Positions:
-  - {x: -25, y: 0.1, z: -25}
-  - {x: 25, y: 0.1, z: -25}
-  - {x: 25, y: 0.1, z: 25}
-  - {x: -25, y: 0.1, z: 25}
+  - {x: -25, y: 0.01, z: -25}
+  - {x: 25, y: 0.01, z: -25}
+  - {x: 25, y: 0.01, z: 25}
+  - {x: -25, y: 0.01, z: 25}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.5
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationBoundaryRenderer
   _boundary: {fileID: 1204068865}
   _lineRenderer: {fileID: 1204068863}
-  _lineHeight: 0.1
+  _lineHeight: 0.01
 --- !u!114 &1204068865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,9 +1560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32c20bf76e16ee429ece01d31c9783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindSystem
-  _windDirection: 270
-  _windForce: 0.1
-  _intensity: 0.3
+  _windDirection: 0
+  _windForce: 0.2
+  _intensity: 0
 --- !u!114 &1328275438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,7 +1576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeatherPresetResolver
   _windSystem: {fileID: 1328275437}
-  _currentPreset: {fileID: 11400000, guid: c88def1922fe7b143afedf6ca4c2cac0, type: 2}
+  _currentPreset: {fileID: 11400000, guid: 934a7ec6d57ce164599c699058d9b64e, type: 2}
 --- !u!1 &1345628814
 GameObject:
   m_ObjectHideFlags: 0

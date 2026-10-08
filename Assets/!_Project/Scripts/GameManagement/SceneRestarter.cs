@@ -28,7 +28,9 @@ public class SceneRestarter : MonoBehaviour
     {
         yield return new WaitForSeconds(_restartDelay);
 
-        Scene activeScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(activeScene.buildIndex);
+        if (_controller != null && !_controller.IsOutside)
+            yield break;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -13,6 +13,10 @@ public class RainController : MonoBehaviour
     private void Awake()
     {
         _particles = GetComponent<ParticleSystem>();
+
+        var velocity = _particles.velocityOverLifetime;
+        velocity.enabled = true;
+        velocity.space = ParticleSystemSimulationSpace.World;
     }
 
     private void Update()
@@ -22,16 +26,13 @@ public class RainController : MonoBehaviour
         var emission = _particles.emission;
         emission.rateOverTime = _maxEmissionRate * intensity;
 
-        var velocity = _particles.velocityOverLifetime;
-        velocity.enabled = true;
-        velocity.space = ParticleSystemSimulationSpace.World;
-
         Vector3 windDir = _weatherSystem != null ? _weatherSystem.WindDirectionVector : Vector3.forward;
         float windForce = _weatherSystem != null ? _weatherSystem.WindForce : 0f;
 
         Vector3 wind = windDir * (windForce * _windHorizontalFactor);
         wind.y = -_fallSpeed;
 
+        var velocity = _particles.velocityOverLifetime;
         velocity.x = wind.x;
         velocity.y = wind.y;
         velocity.z = wind.z;
